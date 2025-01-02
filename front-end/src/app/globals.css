@@ -1,21 +1,91 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Estilo global */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e; /* Fundo escuro */
+  color: #ffffff; /* Texto claro */
+}
+
+/* Estilo do container principal */
+main {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #2b2b2b; /* Fundo cinza escuro */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Título principal */
+h1 {
+  color: #f9f9f9;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Lista de produtos */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+li {
+  background-color: #3a3a3a; /* Fundo dos itens */
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #f1f1f1; /* Texto claro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Label */
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+}
+
+/* Input de texto */
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #444; /* Fundo do input */
+  color: #f9f9f9; /* Texto do input */
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #f39c12; /* Destaque ao focar */
+}
+
+/* Botão */
+button {
+  padding: 10px 15px;
+  background-color: #f39c12; /* Cor laranja */
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #d87f0d; /* Cor laranja mais escura */
 }

@@ -8,11 +8,11 @@ products = [
     {"id": 2, "name": "Produto B", "stock": 20},
 ]
 
-@products_api.route('/', methods=['GET'])
+@products_api.route('/products', methods=['GET'])
 def get_products():
     return jsonify(products)
 
-@products_api.route('/', methods=['POST'])
+@products_api.route('/products', methods=['POST'])
 def add_product():
     data = request.json
     new_product = {

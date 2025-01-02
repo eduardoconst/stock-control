@@ -5,8 +5,8 @@ from products.routes import products_api
 app = Flask(__name__)
 CORS(app)  # Permite chamadas de outras origens (ex.: Next.js)
 
-# Registrar rotas
-app.register_blueprint(products_api, url_prefix='/api/products')
+# Registrar o blueprint
+app.register_blueprint(products_api, url_prefix='/api')
 
 @app.route('/')
 def home():
